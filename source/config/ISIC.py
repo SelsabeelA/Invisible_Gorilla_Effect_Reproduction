@@ -8,7 +8,7 @@ from source.util.general_utils import DefaultDict
 Database_class = Dataset_class
 
 #Training parameters
-num_epochs = 600
+num_epochs = 30
 momentum = 0.9 
 weight_decay = 1e-2
 lr_milestones = [int(num_epochs*0.25),int(num_epochs*0.5),int(num_epochs*0.75)]
@@ -25,7 +25,7 @@ widen_factor = 10
 image_size = 224
 
 root = 'data/ISIC/'
-loader_root = 'data/ISIC'
+loader_root = 'data/ISIC/'
 df_name = 'ISIC'
 
 def database_specific_selections(dataset,selections={},**kwargs):

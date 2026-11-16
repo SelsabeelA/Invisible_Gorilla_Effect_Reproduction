@@ -178,7 +178,7 @@ torch.manual_seed(int(args.seed))
 
 
 if args.return_metrics == True:
-    AUROC, AUCPR = evaluate_ood_detection_method(args.method,net,ID_loader,OOD_loader,return_metrics=True,**kwargs_test)
+    _, AUROC, AUCPR = evaluate_ood_detection_method(args.method,net,ID_loader,OOD_loader,return_metrics=True,**kwargs_test)[0]
     
 else:
     evaluate_ood_detection_method(args.method,net,ID_loader,OOD_loader,**kwargs_test)
